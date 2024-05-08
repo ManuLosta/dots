@@ -1,0 +1,28 @@
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" Plugins  --------------------------------
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+Plug 'preservim/nerdtree'
+
+""" Common Settings
+set showmode
+set relativenumber
+set nu
+set scrolloff=5
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+" Set clipboard
+set clipboard+=unnamedplus
+
+map <leader>sf <Action>(GotoFile)
+map <leader><leader> <Action>(Switcher)
+
