@@ -102,11 +102,9 @@ alias vim="nvim"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export ANDROID_HOME=${HOME}/Android/Sdk
-export PATH=${ANDROID_HOME}/tools:${PATH}
-export PATH=${ANDROID_HOME}/emulator:${PATH}
-export PATH=${ANDROID_HOME}/platform-tools:${PATH}
 
 
 eval "$(starship init zsh)"
 
+
+[ -f "/home/manuel/.ghcup/env" ] && . "/home/manuel/.ghcup/env" # ghcup-env

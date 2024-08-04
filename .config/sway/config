@@ -20,12 +20,11 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | wmenu | xargs swaymsg exec --
-
+set $menu rofi -show drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg $HOME/wallpapers/leaves.png fill
 
 output DP-1 resolution 1920x1080 position 0,0
 output HDMI-A-1 resolution 1920x1080 position 1920,0
@@ -35,11 +34,11 @@ output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -191,3 +190,21 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
+mode "present" {
+    # command starts mirroring
+    bindsym m mode "default"; exec ./scripts/wl-present mirror
+    # these commands modify an already running mirroring window
+    bindsym o mode "default"; exec ./scripts/wl-present  set-output
+    bindsym r mode "default"; exec ./scripts/wl-present set-region
+    bindsym Shift+r mode "default"; exec ./scripts/wl-present unset-region
+    bindsym s mode "default"; exec ./scripts/wl-present set-scaling
+    bindsym f mode "default"; exec ./scripts/wl-present toggle-freeze
+    bindsym c mode "default"; exec ./scripts/wl-present custom
+
+    # return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+p mode "present"
+
+default_border pixel
