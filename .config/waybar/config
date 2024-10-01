@@ -110,14 +110,5 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
-  },
-
-  "custom/spotify": {
-		"exec": "/usr/bin/python3 /home/manuel/.config/waybar/scripts/mediaplayer.py --player spotify",
-		"format": " {}",
-		"return-type": "json",
-		"on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous"
   }
 }
