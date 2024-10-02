@@ -108,3 +108,10 @@ eval "$(starship init zsh)"
 
 
 [ -f "/home/manuel/.ghcup/env" ] && . "/home/manuel/.ghcup/env" # ghcup-env
+
+# bun completions
+[ -s "/home/manuel/.bun/_bun" ] && source "/home/manuel/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
