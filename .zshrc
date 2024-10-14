@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git direnv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,14 +98,14 @@ source $ZSH/oh-my-zsh.sh
 
 alias vim="nvim"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ls='eza --icons'
+alias l='eza -lbF --git --icons'
+alias ll='eza -lbF --git --icons'
+alias la='eza -lbha --time-style=long-iso --git --color-scale --icons'
+alias tree='eza -T --icons'
 
-
-
+# Start Starship
 eval "$(starship init zsh)"
-
 
 [ -f "/home/manuel/.ghcup/env" ] && . "/home/manuel/.ghcup/env" # ghcup-env
 

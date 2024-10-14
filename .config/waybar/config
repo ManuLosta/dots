@@ -11,7 +11,7 @@
     "battery",
     "clock",
     "custom/notification",
-    "tray"
+    "tray",
   ],
 
   "hyprland/workspaces": {
@@ -46,6 +46,7 @@
     "format": "{icon}   {capacity}%",
     "format-good": "{icon}   {capacity}%",
     "format-full": "   {capacity}%",
+    "fromat-charging": "󱐋 {capacity}%",
     "format-icons": ["", "", "", "", ""],
     "interval": 30
   },
@@ -86,8 +87,8 @@
 
   "custom/exit": {
     "format": "{icon}",
-    "format-icons": "󰈆 Exit",
-    "tooltip-format": "{icon} Exit",
+    "format-icons": "󰈆",
+    "tooltip-format": "{icon}",
     "on-click": "wlogout &"
   },
 
