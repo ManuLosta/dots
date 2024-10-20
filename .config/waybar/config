@@ -30,7 +30,8 @@
 
   "clock": {
     "format": "{:%a %b %e %R}",
-    "interval": 30
+    "interval": 30,
+    "timezone": "America/Buenos_Aires"
   },
 
   "battery": {
