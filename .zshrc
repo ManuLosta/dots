@@ -70,7 +70,9 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git direnv)
+plugins=(git direnv tmux)
+
+ZSH_TMUX_AUTOSTART=true
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,10 +110,3 @@ alias tree='eza -T --icons'
 eval "$(starship init zsh)"
 
 [ -f "/home/manuel/.ghcup/env" ] && . "/home/manuel/.ghcup/env" # ghcup-env
-
-# bun completions
-[ -s "/home/manuel/.bun/_bun" ] && source "/home/manuel/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
