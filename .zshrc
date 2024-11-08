@@ -104,9 +104,6 @@ alias ll='eza -lbF --git --icons'
 alias la='eza -lbha --time-style=long-iso --git --color-scale --icons'
 alias tree='eza -T --icons'
 
-# Alias cat to bat
-alias cat="bat"
-
 # Start Starship
 eval "$(starship init zsh)"
 
