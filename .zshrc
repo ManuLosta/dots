@@ -109,5 +109,6 @@ eval "$(starship init zsh)"
 
 [ -f "/home/manuel/.ghcup/env" ] && . "/home/manuel/.ghcup/env" # ghcup-env
 
-export PATH=$PATH:/home/manuel/.spicetify
 export PATH=$PATH:/home/manuel/.local/bin
+
+export PATH=$PATH:/home/manuel/.mix/escripts
