@@ -22,4 +22,4 @@ family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [general]
-import = [ "./themes/tokyonight_moon.toml" ]
+import = [ "./themes/catppuccin-mocha.toml" ]
