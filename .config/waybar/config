@@ -4,12 +4,11 @@
   "height": 18,
 
   "modules-left": ["hyprland/workspaces"],
-  "modules-center": [],
+  "modules-center": ["clock"],
   "modules-right": [
     "backlight",
     "pulseaudio",
     "battery",
-    "clock",
     "custom/notification",
     "tray",
   ],
