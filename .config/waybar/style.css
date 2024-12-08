@@ -6,7 +6,7 @@
 
 * {
   font-family: "JetBrains Mono Nerd Font";
-  font-size: 12px;
+  font-size: 14px;
 }
 
 window#waybar {
@@ -91,6 +91,3 @@ window#waybar.empty {
   padding: 0px 15px 0 15px;
 }
 
-#custom-spotify {
-  padding: 0px 15px 0 15px;
-}

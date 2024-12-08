@@ -3,7 +3,10 @@
   "position": "top",
   "height": 18,
 
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window",
+  ],
   "modules-center": ["clock"],
   "modules-right": [
     "backlight",
@@ -18,17 +21,18 @@
   },
 
   "hyprland/window": {
-    "format": "{}",
-    "max-length": 150
+    "format": "{initialClass}",
+    "icon": true,
+    "icon-size": 18,
   },
 
   "tray": {
-    "icon-size": 14,
+    "icon-size": 18,
     "spacing": 15
   },
 
   "clock": {
-    "format": "{:%a %b %e %R}",
+    "format": "󰃭 {0:%a %b %e}    {0:%R}",
     "interval": 30,
     "timezone": "America/Buenos_Aires"
   },
@@ -43,10 +47,10 @@
       "critical": 20
     },
 
-    "format": "{icon}   {capacity}%",
-    "format-good": "{icon}   {capacity}%",
+    "format": "{icon}  {capacity}%",
+    "format-good": "{icon}  {capacity}%",
     "format-full": "   {capacity}%",
-    "fromat-charging": "󱐋 {capacity}%",
+    "fromat-charging": "󱐋  {capacity}%",
     "format-icons": ["", "", "", "", ""],
     "interval": 30
   },
@@ -83,13 +87,6 @@
     },
 
     "on-click": "pavucontrol &"
-  },
-
-  "custom/exit": {
-    "format": "{icon}",
-    "format-icons": "󰈆",
-    "tooltip-format": "{icon}",
-    "on-click": "wlogout &"
   },
 
   "custom/notification": {
