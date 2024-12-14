@@ -1,19 +1,18 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 18,
-
+  
   "modules-left": [
     "hyprland/workspaces",
     "hyprland/window",
   ],
   "modules-center": ["clock"],
   "modules-right": [
+    "tray",
     "backlight",
     "pulseaudio",
     "battery",
     "custom/notification",
-    "tray",
   ],
 
   "hyprland/workspaces": {
@@ -21,7 +20,7 @@
   },
 
   "hyprland/window": {
-    "format": "{initialClass}",
+    "format": "{}",
     "icon": true,
     "icon-size": 18,
   },

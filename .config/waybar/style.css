@@ -3,10 +3,11 @@
 @define-color primary #89b4fa;
 @define-color green #a6e3a1;
 @define-color red #f38ba8;
+@define-color surface #313244;
 
 * {
   font-family: "JetBrains Mono Nerd Font";
-  font-size: 14px;
+  font-size: 12px;
 }
 
 window#waybar {
@@ -14,35 +15,40 @@ window#waybar {
   color: @fg_color;
 }
 
+window#waybar > box {
+    padding: 0.3rem 0.5rem;
+}
+
 .modules-left {
   background-color: @bg_color;
-  padding: 0px 0px 0px 0px;
 }
 
 .modules-right {
   background-color: @bg_color;
-  padding: 0px 5px 0px 0px;
 }
 
 #workspaces {
+  background-color: @surface;
+  border-radius: 0.5rem;
 }
 
 #workspaces button {
-  padding: 0px 11px 0px 11px;
-  min-width: 1px;
+  border-radius: 1rem;
+  padding: 0 0.2rem;
+  color: @fg_color;
 }
 
+
 #workspaces button.active {
-  padding: 0px 11px 0px 11px;
+  padding: 0 0.75rem;
   background-color: @primary;
-  border-radius: 0px;
   color: @bg_color;
 }
 
 #window {
   color: @fg_color;
   background-color: @bg_color;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 1rem 0px 1rem;
 }
 
 window#waybar.empty #window {
@@ -59,7 +65,7 @@ window#waybar.empty {
 #backlight,
 #pulseudio,
 #battery {
-  padding: 0px 15px 0px 15px;
+  padding: 0px 1rem;
 }
 
 #backlight.icon {
@@ -67,12 +73,14 @@ window#waybar.empty {
 }
 
 #clock {
-  margin: 0px 15px 0px 15px;
+  margin: 0px 1rem 0px 1rem;
 }
 
 #tray {
-  padding: 0px 8px 0px 5px;
-  margin: 0px 5px 0px 5px;
+  background-color: @surface;
+  border-radius: 0.5rem;
+  padding: 0px 1rem;
+  margin: 0px 1rem 0px 0px;
 }
 
 #battery.critical {
@@ -88,6 +96,6 @@ window#waybar.empty {
 }
 
 #custom-notification {
-  padding: 0px 15px 0 15px;
+  padding: 0px 1rem;
 }
 
